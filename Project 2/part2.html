@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Project 2</title>
+	<meta name="author" content="Ciprian Olariu">
+</head>
+
+<body onload="start_game()">
+
+    <script>
+    
+        var colors = ["blue", "cyan", "gold", "gray", "green", "magenta", "orange", "red", "white", "yellow"]
+        var target, guesses = 0;
+        
+        function start_game()
+        {
+            target = colors[Math.floor(Math.random() * colors.length)];
+            //alert("The color to guess is " + target);
+            var correct = false;
+            while(!correct)
+            {
+                var answer = prompt("I am thinking of one of these colors:\n\n" + colors.join(", ") + "\n\nWhat color am I thinking of?");
+                guesses++;
+                correct = check_guess(answer);
+            }
+            
+            function check_guess(answer)
+            {
+                if(colors.indexOf(answer) == -1)
+                {
+                    alert("Sorry, I don't recognize your color.\n\nPlease try again.");
+                    return false;
+                }
+                var compare = answer.localeCompare(target);
+                var hint = "lower";
+                if(compare == 1)
+                    hint = "higher";
+                if(compare != 0)
+                {
+                    alert("Sorry, your guess is not correct!\n\nHint: your color is alphabetically " + hint + " than mine.\n\nPlease try again.");
+                    return false;
+                }
+                document.body.style.background = target;
+                alert("Congratulations! You have guessed the color!\n\nIt took you " + guesses + " guesses to finish the game!\n\nYou can see the color in the background.");
+                return true;
+            }
+            
+        }
+    
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Project 1</title>
+	<meta name="author" content="Ciprian Olariu">
+	<style>
+
+	</style>
+</head>
+
+<body>
+
+    <h1>Please Enter Your Details For Our Dating Website!</h1>
+    
+    <form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Your face</legend>
+            
+            <label for="avatar">Your image:</label>
+            <input type="file" name="avatar" id="avatar" required> <br>
+            
+            <label for="preview">Image preview:</label>
+            <img name="preview" id="preview">
+        </fieldset>
+            
+        <fieldset>
+            <legend>Your General Details</legend>
+            
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Your full name" required> <br>
+            
+            <label for="sex">Gender:</label>
+            <input type="radio" name="sex" id="sex" required> <label for="sex">Male</label> 
+            <input type="radio" name="sex" id="sex"> <label for="sex">Female</label> <br>
+            
+            <label for="age">Age:</label>
+            <input type="number" name="age" id="age" required> <br>
+            
+            <label for="birthdate">Date of birth:</label>
+            <input type="date" name="birthdate" id="birthdate"> <br>
+            
+            <label for="color">Favorite color:</label>
+            <input type="color" name="color" id="color"> <br>
+            
+            <label for="country">Country:</label>
+            <select name="country" id="country">
+                <option>No selection</option>
+                <option>China</option>
+                <option>Germany</option>
+                <option>Romania</option>
+                <option>USA</option>
+                <option>Other country</option>
+            </select>
+        </fieldset>
+            
+        <fieldset>
+            <legend>Your Indicators</legend>
+            
+            <label for="height">Height:</label>
+            <label for="height">Short</label> <input type="range" name="height" id="height"> <label for="height">Tall</label> <br>
+            
+            <label for="salary">Salary:</label>
+            <label for="salary">Poor</label> <input type="range" name="salary" id="salary"> <label for="salary">Rich</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Your Contact Information</legend>
+            
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required> <br>
+            
+            <label for="mobile">Mobile:</label>
+            <input type="tel" name="mobile" id="mobile"> <br>
+            
+            <label for="address">Address:</label>
+            <textarea name="address" id="address"></textarea> <br>
+            
+            <label for="contact">Method to contact you:</label>
+            <input type="checkbox" name="contact" id="contact"> <label for="contact">Email</label>
+            <input type="checkbox" name="contact" id="contact"> <label for="contact">Whatsapp</label>
+            <input type="checkbox" name="contact" id="contact"> <label for="contact">In-app-chat</label>
+        </fieldset>
+        
+        <input type="submit">
+    </form>
+    
+</body>
+
+</html>
